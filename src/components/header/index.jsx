@@ -34,7 +34,7 @@ useEffect(()=>{
   return ()=>{
     clearInterval(intervalId)
   }
-},[])
+},[paths])
 
 
   // 退出登陆  
@@ -70,7 +70,7 @@ function  getTitle (){
         }
       }
     })
-    return title
+    // return title
   }
 
 

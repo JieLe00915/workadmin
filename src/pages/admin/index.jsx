@@ -21,7 +21,7 @@ export default function Admin(props) {
       <LeftNav/>
     </Sider>
     <Layout>
-      <Header>Header</Header>
+      <Header></Header>
       <Content style={{margin: 20, backgroundColor: '#fff'}}>
           <Outlet/>
       </Content>
