@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React, { Suspense } from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from 'react-router-dom';
+import storageUtils from './utils/storageUtils'
+import memoryUtils from './utils/memoryUtils'
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+// 读取local中保存user, 保存到内存中
+const user = storageUtils.getUser()
+memoryUtils.user = user
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+ReactDOM.render(
+  <BrowserRouter>
+  {/* <React.StrictMode> */}
+    <Suspense fallback={<div>Loading...</div>}>
     <App />
-  </React.StrictMode>
-);
+    </Suspense>
+ 
+  {/* </React.StrictMode> */}
+  </BrowserRouter>,document.getElementById('root')
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

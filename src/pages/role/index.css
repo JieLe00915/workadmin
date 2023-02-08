@@ -1,0 +1,8 @@
+.roleKey .ant-modal-footer > div {
+  display: flex;
+  justify-content: center;
+}
+.roleKey .ant-modal-footer > div button {
+  margin-right: 30px;
+  display: block;
+}
