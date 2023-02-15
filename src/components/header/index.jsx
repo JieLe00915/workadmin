@@ -20,9 +20,7 @@ const [weather,setweather]=useState()
 const [title,settitle]=useState()
 const navigate=useNavigate()
 const paths=useLocation()
-const username = memoryUtils.user
-
-// console.log(path);
+const username = memoryUtils.user || ''
 useEffect(()=>{
   getWeather()
   getTitle()
@@ -84,7 +82,6 @@ function  getTitle (){
     <div className="header">
     <div className="header-top">
       <span>欢迎, {username}</span>
-      {/* <a href="javascrit:;" onClick={logout}>退出</a> */}
       <LinkButton onClick={logout}>退出</LinkButton>
     </div>
     <div className="header-bottom">

@@ -82,7 +82,6 @@ export default function Order() {
     return {
       onClick: event => { // 点击行
         setRole(role)
-        // console.log(111,role);
       },
     }
   }

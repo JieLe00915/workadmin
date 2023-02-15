@@ -64,7 +64,7 @@ export default function Leftnav(props) {
     <div className="left-nav">
     <Link to='/' className="left-nav-header">
       <img src={logo} alt="logo"/>
-      <h1>硅谷后台</h1>
+      <h1>家具后台</h1>
     </Link>
 
     <Menu

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import "./index.css"
 import { Form, Icon, Input, Button, message } from 'antd';
 import { Navigate } from 'react-router-dom'
-import logo from '../../assets/images/logo.png'
+// import logo from '../../assets/images/logo.png'
 import api from '../../api/index'
 import { useNavigate } from 'react-router-dom'
 import memoryUtils from '../../utils/memoryUtils'
@@ -68,8 +68,8 @@ function Login(props) {
   return (
     <div className="login">
       <header className="login-header">
-        <img src={logo} alt="logo" />
-        <h1>React项目: 后台管理系统</h1>
+        {/* <img src={logo} alt="logo" /> */}
+        <h1>React项目: 家具后台管理系统</h1>
       </header>
       <section className="login-content">
         <h2>用户登陆</h2>
